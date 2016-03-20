@@ -37,6 +37,23 @@ h4 {
     font-size: 18px;
 }
 
+p.lead {
+    text-weight: normal;
+}
+
+p {
+    margin: 0 0 15px;
+}
+
+a:link, a:visited {
+    color: #dd5638;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #c9302c;
+}
+
 button, input, .btn, a.btn {
     -webkit-font-smoothing: antialiaed;
     text-rendering: optimizeLegibility;
@@ -47,14 +64,78 @@ button, input, .btn, a.btn {
     font-weight: bold;
 }
 
+button.btn:focus {
+    outline: none !important;
+}
+
 .btn-danger {
     background-color: #dd5638;
     border-collapse: #d95131;
 }
 
+.button-success {
+    background: #79b044;
+    boder: none;
+}
+
+.button-success:hover {
+    background: #6a9b3d;
+    boder-color: #6a9b3d;
+}
+
 img {
     max-width: 100%;
 }
+
+.modal-content {
+    background: url('../img/tile.jpg') top left repeat;
+}
+
+.badge.social {
+    background: #ccc;
+    font-size: 24px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 42px;
+    margin: 0 5px 20px 0;
+    padding: 0;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    color: white;
+}
+
+.badge.social.twitter:hover {
+    background: #55acee;
+}
+
+.badge.social.facebook:hover {
+    background: #3b5998;
+}
+
+.badge.social.gplus:hover {
+    background: #db4b39;
+}
+
+blockquote {
+    padding-left: 15px;
+    boder: none;
+    font-style: italic;
+    text-align: left;
+}
+
+blockquote cite {
+    display: block;
+    color: #777;
+    margin: 15px 0 0 0;
+}
+
+blockquote:before {
+    display: none;
+}
+
+
 
 /* === HERO ====*/
 
@@ -125,6 +206,11 @@ img {
 }
 
 /* ======== LAYOUT ======== */
+
+.row + .row {
+    margin-top: 20px;
+}
+
 section {
    padding: 80px 0; 
 }
@@ -179,6 +265,107 @@ section h4 {
     background: white url('../img/brad-elvis.png') 90% -10px no-repeat;
 }
 
+#instructor h2 {
+    margin: 0 0 20px;
+}
+
+#instructor .num {
+    display: table;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    line-height: 24px;
+    height: 140px;
+    width: 140px;
+    text-align: center;
+    background: #dd5638;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    -webkit-font-smoothing: antialiaed;
+    text-rendering: optimizeLegibility;
+}
+
+#instructor .num span {
+    display: block;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+#instructor .num .num-content {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/*========== TESTIMONIALS ==========*/
+
+#kudos {
+    text-align: center;
+}
+
+.testimonial {
+    margin-bottom: 60px;
+}
+
+.testimonial img {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+/*========== SignUp ==========*/
+
+#signup {
+    text-align: center;
+    background: url('../img/hipster-stuff.jpg');
+    background-size: cover;
+    color: white;
+    padding: 140px 0;
+}
+
+#signup {
+    font-weight: normal; 
+}
+
+#signup h2 strong {
+    border-bottom: solid 2px #dd5638;
+}
+
+#signup .btn {
+    font-family: 24px;
+} 
+
+/*========== FOOTER ==========*/
+footer {
+    background: #3e4249;
+    color: white;
+    padding: 20px 0 10px;
+    font-style: 12px;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a:link, footer a:visited {
+    color: white;
+}
+
+footer a:hover {
+    color: #dd5638;
+}
+
+footer li.signup-link a {
+    color: #dd5638;
+}
+
+footer li.signup-link a:hover {
+    font-weight: bold;
+}
+
+
+
+
 /* ====== CUSTOM ICON SPRITES ======*/
 
 i.ci {
@@ -197,3 +384,37 @@ i.ci {
 
 
 
+/*========== MEDIA QUERIES ==========*/
+
+@media screen and ( max-width: 991px ) {
+    #instructor .container {
+        background: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+    }
+}
+
+@media screen and ( max-width: 768px ) {
+    .logo {
+        width: 50%;
+    }
+
+    #optin p {
+        margin: 0 0 10px;
+    }
+
+    #featurette iframe {
+        height: 240px;
+    }
+}
+
+@media screen and ( max-width: 568px ) {
+    #instructor .num {
+        height: 100px;
+        width: 100px;
+        font-size: 22px;
+    }
+
+    #instructor .num span {
+        font-size: 16px;
+    }
+}
